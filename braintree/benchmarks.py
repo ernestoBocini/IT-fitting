@@ -7,7 +7,7 @@ from sklearn.svm import SVC
 from scipy.stats import zscore, norm
 from sklearn import preprocessing
 
-NEURAL_DATA_PATH = '/om2/user/dapello'
+from datamodules.neural_datamodule import NEURAL_DATA_PATH
 
 def wrap_model(identifier, model, image_size):
     import functools
@@ -85,7 +85,7 @@ def list_brainscore_benchmarks():
 class BehaviorScorer:
 
     # path to stimuli
-    data = h5.File(f'{NEURAL_DATA_PATH}/neural_data/many_monkeys2.h5', 'r')
+    data = h5.File(f'{NEURAL_DATA_PATH}/many_monkeys2.h5', 'r')
 
     def __init__(self, variations=6, seeds=20, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -118,11 +118,11 @@ class BehaviorScorer:
         # fetches the appropriate primate i1 / i1n score
         if metric == 'i1':
             target = h5.File(
-                f'{NEURAL_DATA_PATH}/neural_data/i1_hvm640.mat', 'r+'
+                f'{NEURAL_DATA_PATH}/i1_hvm640.mat', 'r+'
             )['i1_hvm640']
         elif metric == 'i1n':    
             target = h5.File(
-                f'{NEURAL_DATA_PATH}/neural_data/i1n_hvm640.mat', 'r+'
+                f'{NEURAL_DATA_PATH}/i1n_hvm640.mat', 'r+'
             )['i1n_hvm640']
             
         # filters by HVM variations

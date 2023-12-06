@@ -1,17 +1,14 @@
-import os
+import argparse
+from pathlib import Path
 
+import h5py as h5
 import numpy as np
 import torch as ch
-import h5py as h5
-import argparse
-
-import torchvision
-from torchvision import transforms as transform_lib
-from torch.utils.data import Dataset, DataLoader
 from pytorch_lightning import LightningDataModule
+from torch.utils.data import Dataset, DataLoader
+from torchvision import transforms as transform_lib
 
-#NEURAL_DATA_PATH = '/home/joeldapello/Code/proj_braintree/braintree-0.2/braintree'
-NEURAL_DATA_PATH = '/om2/user/dapello'
+NEURAL_DATA_PATH = Path(__file__).parent
 
 class StimuliBaseModule(LightningDataModule):
     def __init__(
@@ -344,7 +341,7 @@ class NeuralDataConstructor:
 
 class KKTemporalDataConstructer(NeuralDataConstructor):
 
-    data = h5.File(f'{NEURAL_DATA_PATH}/neural_data/kk_temporal_data.h5', 'r')
+    data = h5.File(f'{NEURAL_DATA_PATH}/kk_temporal_data.h5', 'r')
 
     def __init__(
         self, hparams, partition_scheme=(1100, 900, 100, 100), *args, **kwargs
@@ -438,7 +435,7 @@ def ManyMonkeysValDataConstructer(hparams):
 
 class _ManyMonkeysDataConstructer(NeuralDataConstructor):
 
-    data = h5.File(f'{NEURAL_DATA_PATH}/neural_data/many_monkeys2.h5', 'r')
+    data = h5.File(f'{NEURAL_DATA_PATH}/many_monkeys2.h5', 'r')
 
     def __init__(
         self, hparams, variations='All', partition_scheme=(640, 540, 100, 0), *args, **kwargs
@@ -546,7 +543,7 @@ class _ManyMonkeysDataConstructer(NeuralDataConstructor):
 
 class _SachiMajajHongDataConstructer(NeuralDataConstructor):
 
-    data = h5.File(f'{NEURAL_DATA_PATH}/neural_data/SachiMajajHong2015.h5', 'r')
+    data = h5.File(f'{NEURAL_DATA_PATH}/SachiMajajHong2015.h5', 'r')
 
     def __init__(
         self, hparams, auth='public', partition_scheme=(3200, 2880, 320, 0), *args, **kwargs
@@ -675,7 +672,7 @@ def SachiMajajHongPublicDataConstructer(hparams):
 
 class COCODataConstructer(NeuralDataConstructor):
 
-    data = h5.File(f'{NEURAL_DATA_PATH}/neural_data/bento_nano_COCO.h5', 'r')
+    data = h5.File(f'{NEURAL_DATA_PATH}/bento_nano_COCO.h5', 'r')
 
     def __init__(
         self, hparams, variations='All', partition_scheme=(200, 0, 200, 0), *args, **kwargs
