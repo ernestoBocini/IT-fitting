@@ -12,7 +12,7 @@ NEURAL_DATA_PATH = Path(__file__).parent
 
 class StimuliBaseModule(LightningDataModule):
     def __init__(
-        self, 
+        self,
         hparams,
         neuraldataset=None,
         num_workers=None,
@@ -59,7 +59,7 @@ class StimuliBaseModule(LightningDataModule):
                 transform_lib.Resize(self.image_size),
                 transform_lib.RandomAffine(
                     degrees=self.rotate,
-                    translate=self.translate, 
+                    translate=self.translate,
                     scale=self.scale,
                     shear=self.shear,
                     fillcolor=127
@@ -121,7 +121,7 @@ class StimuliBaseModule(LightningDataModule):
 
         X = self.get_stimuli(stimuli_partition='train')
         Y = self.get_target(
-            neuron_partition=0, 
+            neuron_partition=0,
             stimuli_partition='train',
             animals=hparams.fit_animals,
             neurons=hparams.neurons,
@@ -153,7 +153,7 @@ class StimuliBaseModule(LightningDataModule):
 
         X = self.get_stimuli(stimuli_partition=stimuli_partition)
         Y = self.get_target(
-            neuron_partition=neuron_partition, 
+            neuron_partition=neuron_partition,
             stimuli_partition=stimuli_partition,
             animals=animals,
             neurons=neurons,
@@ -183,7 +183,7 @@ class NeuralDataModule(StimuliBaseModule):
     to format neural data.
     """
     def __init__(
-        self, 
+        self,
         hparams,
         *args,
         **kwargs
@@ -196,11 +196,11 @@ class NeuralDataModule(StimuliBaseModule):
 
         # neural responses
         H = self.constructor.get_neural_responses(
-            animals=animals, 
+            animals=animals,
             n_neurons=neurons,
-            n_trials=n_trials, 
-            neuron_partition=neuron_partition, 
-            stimuli_partition=stimuli_partition, 
+            n_trials=n_trials,
+            neuron_partition=neuron_partition,
+            stimuli_partition=stimuli_partition,
             hparams=hparams
         ).astype('float32')[:self.n_stimuli]
 
@@ -244,7 +244,7 @@ class StimuliDataModule(StimuliBaseModule):
     StimuliBaseModule and uses a dataconstructor to format stimuli and labels.
     """
     def __init__(
-        self, 
+        self,
         hparams,
         *args,
         **kwargs
@@ -278,7 +278,7 @@ class CustomTensorDataset(Dataset):
         # modulo index by length of data, so that we can any index
         N = self.__len__()
         index = int(index%N)
-        
+
         datum = [datum[index] for datum in self.data]
         datum[0] = self.transform(datum[0])
         return datum
@@ -296,7 +296,7 @@ class OldCustomTensorDataset(Dataset):
     __getitem__ operates with any index through modulo
     """
     def __init__(self, X, Y, transform=None):
-        assert X.shape[0] == Y.shape[0] 
+        assert X.shape[0] == Y.shape[0]
         self.X = ch.Tensor(X)
         self.Y = ch.Tensor(Y)
         self.transform = transform
@@ -305,7 +305,7 @@ class OldCustomTensorDataset(Dataset):
         # modulo index by length of data, so that we can any index
         N = self.__len__()
         index = index%N
-        
+
         X = self.transform(self.X[index])
         Y = self.Y[index]
         return (X,Y)
@@ -341,13 +341,13 @@ class NeuralDataConstructor:
 
 class KKTemporalDataConstructer(NeuralDataConstructor):
 
-    data = h5.File(f'{NEURAL_DATA_PATH}/kk_temporal_data.h5', 'r')
-
     def __init__(
         self, hparams, partition_scheme=(1100, 900, 100, 100), *args, **kwargs
     ):
         super().__init__(hparams, partition_scheme, *args, **kwargs)
-        self.n_heldout_neurons = 50 
+        self.n_heldout_neurons = 50
+        self.data = h5.File(f'{NEURAL_DATA_PATH}/kk_temporal_data.h5', 'r')
+
 
     def get_stimuli(self, stimuli_partition):
         # correct flipped axes
@@ -379,7 +379,7 @@ class KKTemporalDataConstructer(NeuralDataConstructor):
             X = X[:, :n_neurons]
 
         if self.verbose: print(f'Neural data shape:\n(stimuli, sites) : {X.shape}')
-        
+
         X_Partitioned = self.partition(X)[stimuli_partition]
         return X_Partitioned
 
@@ -426,7 +426,7 @@ class KKTemporalDataConstructer(NeuralDataConstructor):
         if animals[0] == 'All':
             animals = ['nano.right', 'nano.left', 'magneto.right']
         return animals
-    
+
 def ManyMonkeysDataConstructer(hparams):
     return _ManyMonkeysDataConstructer(hparams)
 
@@ -491,7 +491,7 @@ class _ManyMonkeysDataConstructer(NeuralDataConstructor):
             X = X[:, :n_neurons]
 
         if self.verbose: print(f'Neural data shape:\n(stimuli, sites) : {X.shape}')
-        
+
         X_Partitioned = self.partition(X)[stimuli_partition]
         return X_Partitioned
 
@@ -526,16 +526,16 @@ class _ManyMonkeysDataConstructer(NeuralDataConstructor):
 
         assert ~np.isnan(np.sum(X))
         return X
-    
+
     @staticmethod
     def expand(animals):
         if animals[0] == 'All':
             animals = [
-                'nano.right', 'nano.left', 
-                'magneto.right', 'magneto.left', 
-                'bento.right', 'bento.left', 
-                'solo.left', 
-                'tito.right', 'tito.left', 
+                'nano.right', 'nano.left',
+                'magneto.right', 'magneto.left',
+                'bento.right', 'bento.left',
+                'solo.left',
+                'tito.right', 'tito.left',
                 'chabo.left'
             ]
         return animals
@@ -615,7 +615,7 @@ class _SachiMajajHongDataConstructer(NeuralDataConstructor):
             X = X[:, :n_neurons]
 
         if self.verbose: print(f'Neural data shape:\n(stimuli, sites) : {X.shape}')
-        
+
         X_Partitioned = self.partition(X)[stimuli_partition]
         return X_Partitioned
 
@@ -657,7 +657,7 @@ class _SachiMajajHongDataConstructer(NeuralDataConstructor):
 
         assert ~np.isnan(np.sum(X))
         return X
-    
+
     @staticmethod
     def expand(animals):
         if animals[0] == 'All':
@@ -672,13 +672,12 @@ def SachiMajajHongPublicDataConstructer(hparams):
 
 class COCODataConstructer(NeuralDataConstructor):
 
-    data = h5.File(f'{NEURAL_DATA_PATH}/bento_nano_COCO.h5', 'r')
-
     def __init__(
         self, hparams, variations='All', partition_scheme=(200, 0, 200, 0), *args, **kwargs
     ):
         super().__init__(hparams, partition_scheme, *args, **kwargs)
         self.n_heldout_neurons = 0
+        self.data = h5.File(f'{NEURAL_DATA_PATH}/bento_nano_COCO.h5', 'r')
 
     def get_stimuli(self, stimuli_partition):
         X = self.data['stimuli'][()].transpose(0,3,1,2)
@@ -716,7 +715,7 @@ class COCODataConstructer(NeuralDataConstructor):
             X = X[:, :n_neurons]
 
         if self.verbose: print(f'Neural data shape:\n(stimuli, sites) : {X.shape}')
-        
+
         X_Partitioned = self.partition(X)[stimuli_partition]
         return X_Partitioned
 
@@ -751,13 +750,13 @@ class COCODataConstructer(NeuralDataConstructor):
 
         assert ~np.isnan(np.sum(X))
         return X
-    
+
     @staticmethod
     def expand(animals):
         if animals[0] == 'All':
             animals = [
-                'nano.left', 
-                'bento.left', 
+                'nano.left',
+                'bento.left',
             ]
         return animals
 
@@ -784,19 +783,19 @@ class Partition:
         self.ntrain = ntrain
         self.ntest = ntest
         self.nval = nval
-        
+
         # so we can supply the idx if we want to use the same partition scheme
         if idx:
             self.idx = idx
         else:
             self.idx = np.random.choice(ntotal, ntotal, replace=False)
-            
+
         self.train_idx = self.idx[:ntrain]
-        
+
         test_and_val_idx = self.idx[ntrain:]
         self.test_idx = test_and_val_idx[:ntest]
         self.val_idx = test_and_val_idx[ntest:]
-    
+
         # make sure none of the indices are overlapping
         assert 0 == len(
             set(self.train_idx)
@@ -806,8 +805,8 @@ class Partition:
 
     def __call__(self, X):
         return {
-            'train' : X[self.train_idx], 
-            'test' : X[self.test_idx], 
+            'train' : X[self.train_idx],
+            'test' : X[self.test_idx],
             'val' : X[self.val_idx]
         }
 
