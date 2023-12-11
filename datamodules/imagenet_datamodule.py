@@ -11,7 +11,9 @@ from torch.utils.data.distributed import DistributedSampler
 
 
 #default_Imagenet_dir = '/data/ImageNet/ILSVRC2012'
-default_Imagenet_dir = '/om/data/public/imagenet/images_complete/ilsvrc/'
+# default_Imagenet_dir = '/om/data/public/imagenet/images_complete/ilsvrc/'
+# default_Imagenet_dir = '/braintree/data2/active/common/imagenet_raw/'
+default_Imagenet_dir = '/work/upschrimpf1/akgokce/data/imagenet/'
 
 class ImagenetDataModule(LightningDataModule):
 
@@ -62,7 +64,7 @@ class ImagenetDataModule(LightningDataModule):
         Uses the validation split of imagenet2012 for testing
         """
         transforms = self.val_transform()
-        dataset = self._get_dataset('val', transforms)
+        dataset = self._get_dataset('val_in_folders', transforms)
         loader = self._get_DataLoader(
             dataset,
             batch_size=self.batch_size,
