@@ -18,7 +18,7 @@ class _CenteredKernelAlignment(Module):
             X = X.cpu()
             Y = Y.cpu()
 
-        assert X.shape[0] == Y.shape[0]
+        assert X.shape[0] == Y.shape[0], f"Shapes {X.shape} and {Y.shape} do not match"
         X, Y = X.view(X.shape[0], -1), Y.view(Y.shape[0], -1)
         X = X - X.mean(dim=0)
         Y = Y - Y.mean(dim=0)
