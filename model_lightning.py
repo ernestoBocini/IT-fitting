@@ -613,9 +613,9 @@ class Model_Lightning(LightningModule):
             f'{dataset}_{mode}_loss' : class_loss,
             f'{dataset}_{mode}_acc1' : acc1,
             f'{dataset}_{mode}_acc5' : acc5,
-            f'{dataset}_{mode}_EVD90' : EVD90,
-            f'{dataset}_{mode}_PR' : PR,
-            f'{dataset}_{mode}_features' : features
+            # f'{dataset}_{mode}_EVD90' : EVD90,
+            # f'{dataset}_{mode}_PR' : PR,
+            # f'{dataset}_{mode}_features' : features
         }
 
         self.log_dict(log, on_step=False, on_epoch=True, prog_bar=True, logger=True)
