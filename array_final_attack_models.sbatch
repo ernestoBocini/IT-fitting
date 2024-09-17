@@ -1,25 +1,29 @@
 #!/bin/bash
-#SBATCH -c 20                # Number of cores
-#SBATCH -t 5000              # Runtime in D-HH:MM, minimum of 10 minutes
-#SBATCH --mem=40g            # Memory pool for all cores '(see also --mem-per-cpu)
-#SBATCH --gres=gpu:QUADRORTX6000:1
-#SBATCH --array=0-10
+#SBATCH --gres gpu:1
+#SBATCH --mem 100000M
+#SBATCH --time 40:00:00
 #SBATCH -o slurm_logs/score_models_%A_%a.out  # File to which STDOUT will be written, %j inserts jobid
 #SBATCH -e slurm_logs/score_models_%A_%a.err  # File to which STDERR will be written, %j inserts jobid
 
 ### for multiple GPUS #SBATCH --array=0-2
 
-export HOME='/om2/user/dapello/'
-module load openmind/anaconda/3-4.0.0
-source activate braintree-0.2
+source ~/.bashrc
 
-cd /om2/user/dapello/Code/proj_braintree/braintree-0.2/braintree
+conda activate it-fitting-bs
+
+nvidia-smi
+
+seed=3
+date=220505
+arch=cornet_s
+loss=logCKA
+labels=1
 
 nvidia-smi
 #sp='new_final_models'
 sp='new_AT2_final_models'
-ds='COCO'
-#ds='HVM_var6'
+#ds='COCO'
+ds='HVM_var6'
 
 #norm='inf'
 #

@@ -1,35 +1,30 @@
 #!/bin/bash
-#SBATCH -c 20                # Number of cores
-#SBATCH -t 8000              # Runtime in D-HH:MM, minimum of 10 minutes
-#SBATCH --mem=40g            # Memory pool for all cores '(see also --mem-per-cpu)
-#SBATCH --gres=gpu:QUADRORTX6000:1
-#SBATCH --array=0-6
-#SBATCH -o slurm_logs/score_models_%A_%a.out  # File to which STDOUT will be written, %j inserts jobid
-#SBATCH -e slurm_logs/score_models_%A_%a.err  # File to which STDERR will be written, %j inserts jobid
+#SBATCH --gres gpu:1
+#SBATCH --mem 100G
+#SBATCH --time 12:00:00
 
-### for multiple GPUS #SBATCH --array=0-2
+source ~/.bashrc
 
-export HOME='/om2/user/dapello/'
-module load openmind/anaconda/3-4.0.0
-source activate braintree-0.2
-
-cd /om2/user/dapello/Code/proj_braintree/braintree-0.2/braintree
+conda activate it-fitting
+cd it-fitting
 
 nvidia-smi
 
-seed=3
+
+seed=0
 date=220505
 arch=cornet_s
 loss=logCKA
 labels=1
+
 
 # Imagenet (control)
 if [ $SLURM_ARRAY_TASK_ID == 0 ]; 
 then
     mix=1
     sp=${date}-final-AT2-labels_${labels}-mix_${mix}
-    python main.py -v --seed $seed --neural_loss $loss --arch $arch --epochs 60 --save_path $sp -nd sachimajajhongpublic -s All -n All \
-        -BS dicarlo.Rajalingham2018-i2n dicarlo.Kar2022human-i2n dicarlo.Kar2018-i2n dicarlo.Rajalingham2018subset-i2n -aei \
+    CUDA_VISIBLE_DEVICES=0 python main.py -v --seed $seed --neural_loss $loss --arch $arch --epochs 60 --save_path $sp -nd sachimajajhongpublic -s All -n All \
+        -aei \
         --loss_weights 1 0 1 -mix_rate $mix -causal 1 --val_every 30 -ati -teps 0.015686
 fi
 

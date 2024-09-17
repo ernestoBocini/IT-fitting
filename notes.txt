@@ -1,0 +1,2 @@
+devo provare a chiedere a loro lo slurm file che hanno lanciato, e se hanno provato a metterci anche il benchmark. L'unica differenza
+rispetto al mio per orara è che loro hanno anche coco 

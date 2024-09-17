@@ -1,0 +1,10 @@
+pytorch-lightning==1.5.1
+torch==1.8.1
+torchvision
+numpy
+pandas
+h5py
+scikit-learn
+psutil
+cornet@ git+https://github.com/dicarlolab/CORnet
+vonenet@ git+https://github.com/dicarlolab/vonenet

@@ -1,0 +1,278 @@
+/var/spool/slurmd/job1560974/slurm_script: line 9: cd: it-fitting: No such file or directory
+Tue Jan 30 10:11:08 2024       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 525.105.17   Driver Version: 525.105.17   CUDA Version: 12.0     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  Tesla V100-PCIE...  On   | 00000000:86:00.0 Off |                  Off |
+| N/A   51C    P0   134W / 250W |    388MiB / 32768MiB |     84%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   1  Tesla V100-PCIE...  On   | 00000000:D8:00.0 Off |                  Off |
+| N/A   31C    P0    26W / 250W |      0MiB / 32768MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|    0   N/A  N/A   3505308      C   ...aiofkyupgds4p/bin/gmx_mpi      384MiB |
++-----------------------------------------------------------------------------+
+/home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/brainscore/metrics/__init__.py:37: FutureWarning: xarray subclass Score should explicitly define __slots__
+  class Score(DataAssembly):
+Global seed set to 0
+[W Context.cpp:70] Warning: torch.use_deterministic_algorithms is in beta, and its design and functionality may change in the future. (function operator())
+/home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/pytorch_lightning/core/datamodule.py:175: LightningDeprecationWarning: DataModule property `dims` was deprecated in v1.5 and will be removed in v1.7.
+  rank_zero_deprecation("DataModule property `dims` was deprecated in v1.5 and will be removed in v1.7.")
+/home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/torchvision/transforms/transforms.py:1329: UserWarning: Argument fillcolor is deprecated and will be removed since v0.10.0. Please, use fill instead
+  "Argument fillcolor is deprecated and will be removed since v0.10.0. Please, use fill instead"
+/home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/torch/utils/data/dataloader.py:477: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+Using 16bit native Automatic Mixed Precision (AMP)
+/home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/pytorch_lightning/trainer/connectors/logger_connector/logger_connector.py:34: LightningDeprecationWarning: Setting `log_gpu_memory` with the trainer flag is deprecated in v1.5 and will be removed in v1.7. Please monitor GPU stats with the `DeviceStatsMonitor` callback directly instead.
+  "Setting `log_gpu_memory` with the trainer flag is deprecated in v1.5 and will be removed in v1.7. "
+/home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/pytorch_lightning/trainer/connectors/callback_connector.py:148: LightningDeprecationWarning: Setting `Trainer(checkpoint_callback=<pytorch_lightning.callbacks.model_checkpoint.ModelCheckpoint object at 0x7fdedd5b97f0>)` is deprecated in v1.5 and will be removed in v1.7. Please consider using `Trainer(enable_checkpointing=<pytorch_lightning.callbacks.model_checkpoint.ModelCheckpoint object at 0x7fdedd5b97f0>)`.
+  f"Setting `Trainer(checkpoint_callback={checkpoint_callback})` is deprecated in v1.5 and will "
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/torch/utils/data/dataloader.py:477: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+Namespace(BS_benchmarks=['dicarlo.Rajalingham2018-i2n'], adapt_bn_to_stim=1, adv_eval_images=True, adv_eval_neural=False, adv_train_images=False, arch='cornet_s', batch_size=128, behavior_benchmarks=['None'], benchmarks=['fneurons.ustimuli', 'magneto.var6', 'nano.var6', 'nano.left.var6'], causal=1, controls=['None'], datamodule=['ImageNet', 'NeuralData'], distributed_backend='dp', epochs=2, eps=0.000980392156862745, evaluate=False, exponent=-1.0, file_name='model_cornet_s-loss_logCKA-ds_sachimajajhongpublic-fanimals_All-neurons_All-stimuli_All-seed_0', fit_animals=['All'], gpus=1, image_size=224, log_save_path='./logs/EB', loss_weights=[1.0, 1.0, 1.0], lr=0.001, mix_rate=1.0, momentum=0.9, multi_bn=0, neural_loss='logCKA', neural_train_transform=1, neural_val_loss='CKA', neuraldataset='sachimajajhongpublic', neurons='All', num_nodes=1, num_workers=4, optim='sgd', pretrained=1, rank=10, record_time=False, regions=['IT'], rotate='(-0.5, 0.5)', save_path='EB', save_top_k=1, scale='(0.9, 1.1)', scheduler='StepLR', seed=0, shear='(0.9375, 1.0625, 0.9375, 1.0625)', statedict_path='EB/trained_models/model_cornet_s-loss_logCKA-ds_sachimajajhongpublic-fanimals_All-neurons_All-stimuli_All-seed_0.pt', step_size=10000, stimuli='All', test=0, test_animals=['All'], train_eps=0.000980392156862745, translate='(0.0625, 0.0625)', trials='All', v_num=None, val_batches=0.1, val_every=30, verbose=True, weight_decay=0.0001, window='7t17')
+Using pretrained model: 1
+Hooking regions ['IT']
+
+validating on fitted neurons and unfitted stimuli
+constructing test data with
+animals:['All']
+neurons:All
+trials:All
+
+chabo left shape:
+(time_bins, stimuli, sites) : (36, 3200, 38)
+chabo left shape:
+(stimuli, sites) : (3200, 38)
+(stimuli, sites) : (3200, 38)
+tito left shape:
+(time_bins, stimuli, sites) : (36, 3200, 63)
+tito left shape:
+(stimuli, sites) : (3200, 63)
+(stimuli, sites) : (3200, 63)
+solo left shape:
+(time_bins, stimuli, sites) : (36, 3200, 88)
+solo left shape:
+(stimuli, sites) : (3200, 88)
+(stimuli, sites) : (3200, 88)
+Neural data shape:
+(stimuli, sites) : (3200, 189)
+Using transforms on neural training data
+neural validation set shape: (320, 3, 256, 256), [(320, 189), (320,)]
+constructing test data with
+animals:['magneto.left', 'magneto.right']
+neurons:All
+trials:All
+
+magneto left shape:
+(stimuli, sites, trials) : (320, 19, 51)
+(stimuli, sites, trials) : (320, 19, 51)
+(stimuli, sites) : (320, 19)
+magneto right shape:
+(stimuli, sites, trials) : (320, 125, 63)
+(stimuli, sites, trials) : (320, 125, 63)
+(stimuli, sites) : (320, 125)
+Neural data shape:
+(stimuli, sites) : (320, 144)
+Using transforms on neural training data
+neural validation set shape: (320, 3, 256, 256), [(320, 144), (320,)]
+constructing test data with
+animals:['magneto.left']
+neurons:All
+trials:All
+
+magneto left shape:
+(stimuli, sites, trials) : (320, 19, 51)
+(stimuli, sites, trials) : (320, 19, 51)
+(stimuli, sites) : (320, 19)
+Neural data shape:
+(stimuli, sites) : (320, 19)
+Using transforms on neural training data
+neural validation set shape: (320, 3, 256, 256), [(320, 19), (320,)]
+constructing test data with
+animals:['nano.left', 'nano.right']
+neurons:All
+trials:All
+
+nano left shape:
+(stimuli, sites, trials) : (320, 141, 58)
+(stimuli, sites, trials) : (320, 141, 58)
+(stimuli, sites) : (320, 141)
+nano right shape:
+(stimuli, sites, trials) : (320, 139, 47)
+(stimuli, sites, trials) : (320, 139, 47)
+(stimuli, sites) : (320, 139)
+Neural data shape:
+(stimuli, sites) : (320, 280)
+Using transforms on neural training data
+neural validation set shape: (320, 3, 256, 256), [(320, 280), (320,)]
+constructing test data with
+animals:['nano.left']
+neurons:All
+trials:All
+
+nano left shape:
+(stimuli, sites, trials) : (320, 141, 58)
+(stimuli, sites, trials) : (320, 141, 58)
+(stimuli, sites) : (320, 141)
+Neural data shape:
+(stimuli, sites) : (320, 141)
+Using transforms on neural training data
+neural validation set shape: (320, 3, 256, 256), [(320, 141), (320,)]
+record_time =  False
+Validating: 0it [00:00, ?it/s]Validating: 0it [00:00, ?it/s]Loading catalog from entrypoints
+Loading lookup from /home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/brainscore/lookup.csv
+
+activations:   0%|          | 0/2176 [00:00<?, ?it/s][A
+activations:   3%|▎         | 64/2176 [00:02<01:09, 30.54it/s][A
+activations:   6%|▌         | 128/2176 [00:04<01:15, 27.19it/s][A
+activations:   9%|▉         | 192/2176 [00:06<01:08, 28.91it/s][A
+activations:  12%|█▏        | 256/2176 [00:08<01:04, 29.66it/s][A
+activations:  15%|█▍        | 320/2176 [00:10<01:00, 30.74it/s][A
+activations:  18%|█▊        | 384/2176 [00:13<01:03, 28.37it/s][A
+activations:  21%|██        | 448/2176 [00:15<00:58, 29.58it/s][A
+activations:  24%|██▎       | 512/2176 [00:17<00:54, 30.68it/s][A
+activations:  26%|██▋       | 576/2176 [00:19<00:51, 31.10it/s][A
+activations:  29%|██▉       | 640/2176 [00:20<00:47, 32.28it/s][A
+activations:  32%|███▏      | 704/2176 [00:22<00:43, 33.47it/s][A
+activations:  35%|███▌      | 768/2176 [00:24<00:43, 32.21it/s][A
+activations:  38%|███▊      | 832/2176 [00:27<00:44, 30.32it/s][A
+activations:  41%|████      | 896/2176 [00:29<00:40, 31.44it/s][A
+activations:  44%|████▍     | 960/2176 [00:31<00:39, 30.74it/s][A
+activations:  47%|████▋     | 1024/2176 [00:33<00:36, 31.25it/s][A
+activations:  50%|█████     | 1088/2176 [00:35<00:33, 32.05it/s][A
+activations:  53%|█████▎    | 1152/2176 [00:36<00:30, 33.82it/s][A
+activations:  56%|█████▌    | 1216/2176 [00:38<00:27, 34.47it/s][A
+activations:  59%|█████▉    | 1280/2176 [00:40<00:26, 33.65it/s][A
+activations:  62%|██████▏   | 1344/2176 [00:42<00:25, 32.80it/s][A
+activations:  65%|██████▍   | 1408/2176 [00:44<00:23, 32.65it/s][A
+activations:  68%|██████▊   | 1472/2176 [00:46<00:20, 34.26it/s][A
+activations:  71%|███████   | 1536/2176 [00:47<00:18, 35.47it/s][A
+activations:  74%|███████▎  | 1600/2176 [00:49<00:15, 36.11it/s][A
+activations:  76%|███████▋  | 1664/2176 [00:52<00:15, 32.14it/s][A
+activations:  79%|███████▉  | 1728/2176 [00:53<00:12, 35.40it/s][A
+activations:  82%|████████▏ | 1792/2176 [00:55<00:10, 37.11it/s][A
+activations:  85%|████████▌ | 1856/2176 [00:56<00:08, 39.72it/s][A
+activations:  88%|████████▊ | 1920/2176 [00:58<00:06, 37.90it/s][A
+activations:  91%|█████████ | 1984/2176 [01:00<00:05, 36.31it/s][A
+activations:  94%|█████████▍| 2048/2176 [01:02<00:03, 36.14it/s][A
+activations:  97%|█████████▋| 2112/2176 [01:03<00:01, 39.40it/s][A
+activations: 100%|██████████| 2176/2176 [01:04<00:00, 44.88it/s][Aactivations: 100%|██████████| 2176/2176 [01:04<00:00, 33.85it/s]
+
+layer packaging:   0%|          | 0/1 [00:00<?, ?it/s][Alayer packaging: 100%|██████████| 1/1 [00:00<00:00, 118.27it/s]
+/home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/scipy/optimize/linesearch.py:327: LineSearchWarning: The line search algorithm did not converge
+  warn('The line search algorithm did not converge', LineSearchWarning)
+/home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/sklearn/utils/optimize.py:204: UserWarning: Line Search failed
+  warnings.warn('Line Search failed')
+/home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/boto3/compat.py:88: PythonDeprecationWarning: Boto3 will no longer support Python 3.6 starting May 30, 2022. To continue receiving service updates, bug fixes, and security updates please upgrade to Python 3.7 or later. More information can be found here: https://aws.amazon.com/blogs/developer/python-support-policy-updates-for-aws-sdks-and-tools/
+  warnings.warn(warning, PythonDeprecationWarning)
+Traceback (most recent call last):
+  File "/home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/brainio/fetch.py", line 78, in download_boto
+    self.download_boto_config(config=None)
+  File "/home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/brainio/fetch.py", line 94, in download_boto_config
+    with tqdm(total=obj.content_length, unit='B', unit_scale=True,
+  File "/home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/boto3/resources/factory.py", line 380, in property_loader
+    self.load()
+  File "/home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/boto3/resources/factory.py", line 564, in do_action
+    response = action(self, *args, **kwargs)
+  File "/home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/boto3/resources/action.py", line 88, in __call__
+    response = getattr(parent.meta.client, operation_name)(*args, **params)
+  File "/home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/botocore/client.py", line 508, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "/home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/botocore/client.py", line 911, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.exceptions.ClientError: An error occurred (403) when calling the HeadObject operation: Forbidden
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/brainio/fetch.py", line 84, in download_boto
+    self.download_boto_config(config=unsigned_config)
+  File "/home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/brainio/fetch.py", line 94, in download_boto_config
+    with tqdm(total=obj.content_length, unit='B', unit_scale=True,
+  File "/home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/boto3/resources/factory.py", line 380, in property_loader
+    self.load()
+  File "/home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/boto3/resources/factory.py", line 564, in do_action
+    response = action(self, *args, **kwargs)
+  File "/home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/boto3/resources/action.py", line 88, in __call__
+    response = getattr(parent.meta.client, operation_name)(*args, **params)
+  File "/home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/botocore/client.py", line 508, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "/home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/botocore/client.py", line 911, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.exceptions.ClientError: An error occurred (403) when calling the HeadObject operation: Forbidden
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "main.py", line 199, in <module>
+    main(get_args())
+  File "main.py", line 56, in main
+    trainer.validate(model)
+  File "/home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/pytorch_lightning/trainer/trainer.py", line 814, in validate
+    return self._call_and_handle_interrupt(self._validate_impl, model, dataloaders, ckpt_path, verbose, datamodule)
+  File "/home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/pytorch_lightning/trainer/trainer.py", line 682, in _call_and_handle_interrupt
+    return trainer_fn(*args, **kwargs)
+  File "/home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/pytorch_lightning/trainer/trainer.py", line 857, in _validate_impl
+    results = self._run(model, ckpt_path=self.validated_ckpt_path)
+  File "/home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/pytorch_lightning/trainer/trainer.py", line 1193, in _run
+    self._dispatch()
+  File "/home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/pytorch_lightning/trainer/trainer.py", line 1268, in _dispatch
+    self.training_type_plugin.start_evaluating(self)
+  File "/home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/pytorch_lightning/plugins/training_type/training_type_plugin.py", line 206, in start_evaluating
+    self._results = trainer.run_stage()
+  File "/home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/pytorch_lightning/trainer/trainer.py", line 1279, in run_stage
+    return self._run_evaluate()
+  File "/home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/pytorch_lightning/trainer/trainer.py", line 1327, in _run_evaluate
+    eval_loop_results = self._evaluation_loop.run()
+  File "/home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/pytorch_lightning/loops/base.py", line 151, in run
+    output = self.on_run_end()
+  File "/home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/pytorch_lightning/loops/dataloader/evaluation_loop.py", line 130, in on_run_end
+    self._evaluation_epoch_end(outputs)
+  File "/home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/pytorch_lightning/loops/dataloader/evaluation_loop.py", line 235, in _evaluation_epoch_end
+    model.validation_epoch_end(outputs)
+  File "/work/upschrimpf1/bocini/domain-transfer/IT-fitting/model_lightning.py", line 260, in validation_epoch_end
+    benchmark_identifier=benchmark_identifier,
+  File "/work/upschrimpf1/bocini/domain-transfer/IT-fitting/braintree/benchmarks.py", line 68, in score_model
+    benchmark_identifier=benchmark_identifier
+  File "/home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/result_caching/__init__.py", line 80, in wrapper
+    result = function(*args, **kwargs)
+  File "/home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/brainscore/__init__.py", line 50, in score_model
+    score = benchmark(model)
+  File "/home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/brainscore/utils/__init__.py", line 80, in __call__
+    return self.content(*args, **kwargs)
+  File "/home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/brainscore/benchmarks/rajalingham2018.py", line 43, in __call__
+    stimulus_set = place_on_screen(self._assembly.stimulus_set, target_visual_degrees=candidate.visual_degrees(),
+  File "/home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/brainscore/utils/__init__.py", line 54, in __getattr__
+    self._ensure_loaded()
+  File "/home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/brainscore/utils/__init__.py", line 73, in _ensure_loaded
+    self.content = self.load_fnc()
+  File "/home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/brainscore/benchmarks/rajalingham2018.py", line 30, in <lambda>
+    self._assembly = LazyLoad(lambda: load_assembly('private'))
+  File "/home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/brainscore/benchmarks/rajalingham2018.py", line 73, in load_assembly
+    assembly = brainscore.get_assembly(f'dicarlo.Rajalingham2018.{access}')
+  File "/home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/brainscore/__init__.py", line 15, in get_assembly
+    assembly = brainio_get_assembly(name)
+  File "/home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/brainio/fetch.py", line 159, in get_assembly
+    location=assembly_lookup['location'], sha1=assembly_lookup['sha1'])
+  File "/home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/brainio/fetch.py", line 125, in fetch_file
+    local_path = fetcher.fetch()
+  File "/home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/brainio/fetch.py", line 71, in fetch
+    self.download_boto()
+  File "/home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/brainio/fetch.py", line 88, in download_boto
+    raise Exception([e_signed, e_unsigned])
+Exception: [ClientError('An error occurred (403) when calling the HeadObject operation: Forbidden',), ClientError('An error occurred (403) when calling the HeadObject operation: Forbidden',)]

@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+braintree/adversary.py
+braintree/benchmarks.py
+braintree/dataloader.py
+braintree/losses.py
+braintree/metrics.py
+braintree.egg-info/PKG-INFO
+braintree.egg-info/SOURCES.txt
+braintree.egg-info/dependency_links.txt
+braintree.egg-info/not-zip-safe
+braintree.egg-info/requires.txt
+braintree.egg-info/top_level.txt

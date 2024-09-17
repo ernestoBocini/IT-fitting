@@ -1,0 +1,86 @@
+Fri Feb  2 11:58:38 2024       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 525.105.17   Driver Version: 525.105.17   CUDA Version: 12.0     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  Tesla V100-PCIE...  On   | 00000000:86:00.0 Off |                  Off |
+| N/A   35C    P0    23W / 250W |      0MiB / 32768MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   1  Tesla V100-PCIE...  On   | 00000000:D8:00.0 Off |                  Off |
+| N/A   40C    P0    65W / 250W |   6328MiB / 32768MiB |     98%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|    1   N/A  N/A   3499646      C   ...aiofkyupgds4p/bin/gmx_mpi      316MiB |
+|    1   N/A  N/A   3499647      C   ...aiofkyupgds4p/bin/gmx_mpi      316MiB |
+|    1   N/A  N/A   3499648      C   ...aiofkyupgds4p/bin/gmx_mpi      316MiB |
+|    1   N/A  N/A   3499649      C   ...aiofkyupgds4p/bin/gmx_mpi      316MiB |
+|    1   N/A  N/A   3499650      C   ...aiofkyupgds4p/bin/gmx_mpi      316MiB |
+|    1   N/A  N/A   3499651      C   ...aiofkyupgds4p/bin/gmx_mpi      316MiB |
+|    1   N/A  N/A   3499652      C   ...aiofkyupgds4p/bin/gmx_mpi      316MiB |
+|    1   N/A  N/A   3499653      C   ...aiofkyupgds4p/bin/gmx_mpi      316MiB |
+|    1   N/A  N/A   3499654      C   ...aiofkyupgds4p/bin/gmx_mpi      316MiB |
+|    1   N/A  N/A   3499655      C   ...aiofkyupgds4p/bin/gmx_mpi      316MiB |
+|    1   N/A  N/A   3499656      C   ...aiofkyupgds4p/bin/gmx_mpi      316MiB |
+|    1   N/A  N/A   3499657      C   ...aiofkyupgds4p/bin/gmx_mpi      316MiB |
+|    1   N/A  N/A   3499658      C   ...aiofkyupgds4p/bin/gmx_mpi      316MiB |
+|    1   N/A  N/A   3499659      C   ...aiofkyupgds4p/bin/gmx_mpi      316MiB |
+|    1   N/A  N/A   3499660      C   ...aiofkyupgds4p/bin/gmx_mpi      316MiB |
+|    1   N/A  N/A   3499661      C   ...aiofkyupgds4p/bin/gmx_mpi      316MiB |
+|    1   N/A  N/A   3499662      C   ...aiofkyupgds4p/bin/gmx_mpi      316MiB |
+|    1   N/A  N/A   3499663      C   ...aiofkyupgds4p/bin/gmx_mpi      316MiB |
+|    1   N/A  N/A   3499664      C   ...aiofkyupgds4p/bin/gmx_mpi      316MiB |
+|    1   N/A  N/A   3499665      C   ...aiofkyupgds4p/bin/gmx_mpi      316MiB |
++-----------------------------------------------------------------------------+
+Fri Feb  2 11:58:39 2024       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 525.105.17   Driver Version: 525.105.17   CUDA Version: 12.0     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  Tesla V100-PCIE...  On   | 00000000:86:00.0 Off |                  Off |
+| N/A   35C    P0    23W / 250W |      0MiB / 32768MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   1  Tesla V100-PCIE...  On   | 00000000:D8:00.0 Off |                  Off |
+| N/A   40C    P0    64W / 250W |   6328MiB / 32768MiB |     98%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|    1   N/A  N/A   3499646      C   ...aiofkyupgds4p/bin/gmx_mpi      316MiB |
+|    1   N/A  N/A   3499647      C   ...aiofkyupgds4p/bin/gmx_mpi      316MiB |
+|    1   N/A  N/A   3499648      C   ...aiofkyupgds4p/bin/gmx_mpi      316MiB |
+|    1   N/A  N/A   3499649      C   ...aiofkyupgds4p/bin/gmx_mpi      316MiB |
+|    1   N/A  N/A   3499650      C   ...aiofkyupgds4p/bin/gmx_mpi      316MiB |
+|    1   N/A  N/A   3499651      C   ...aiofkyupgds4p/bin/gmx_mpi      316MiB |
+|    1   N/A  N/A   3499652      C   ...aiofkyupgds4p/bin/gmx_mpi      316MiB |
+|    1   N/A  N/A   3499653      C   ...aiofkyupgds4p/bin/gmx_mpi      316MiB |
+|    1   N/A  N/A   3499654      C   ...aiofkyupgds4p/bin/gmx_mpi      316MiB |
+|    1   N/A  N/A   3499655      C   ...aiofkyupgds4p/bin/gmx_mpi      316MiB |
+|    1   N/A  N/A   3499656      C   ...aiofkyupgds4p/bin/gmx_mpi      316MiB |
+|    1   N/A  N/A   3499657      C   ...aiofkyupgds4p/bin/gmx_mpi      316MiB |
+|    1   N/A  N/A   3499658      C   ...aiofkyupgds4p/bin/gmx_mpi      316MiB |
+|    1   N/A  N/A   3499659      C   ...aiofkyupgds4p/bin/gmx_mpi      316MiB |
+|    1   N/A  N/A   3499660      C   ...aiofkyupgds4p/bin/gmx_mpi      316MiB |
+|    1   N/A  N/A   3499661      C   ...aiofkyupgds4p/bin/gmx_mpi      316MiB |
+|    1   N/A  N/A   3499662      C   ...aiofkyupgds4p/bin/gmx_mpi      316MiB |
+|    1   N/A  N/A   3499663      C   ...aiofkyupgds4p/bin/gmx_mpi      316MiB |
+|    1   N/A  N/A   3499664      C   ...aiofkyupgds4p/bin/gmx_mpi      316MiB |
+|    1   N/A  N/A   3499665      C   ...aiofkyupgds4p/bin/gmx_mpi      316MiB |
++-----------------------------------------------------------------------------+

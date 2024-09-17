@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="504pt" height="504pt" viewBox="0 0 504 504" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2024-01-18T15:29:11.073038</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.5.3, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 504 
+L 504 504 
+L 504 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 66.068 442.612 
+L 486.657 442.612 
+L 486.657 34.368 
+L 66.068 34.368 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path id="m545fa0dad1" d="M 0 0 
+L 0 4.8 
+" style="stroke: #262626"/>
+      </defs>
+      <g>
+       <use xlink:href="#m545fa0dad1" x="66.068" y="462.612" style="fill: #262626; stroke: #262626"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="fill: #262626; font: 8.8px 'sans-serif'; text-anchor: middle" x="66.068" y="477.598625" transform="rotate(-0, 66.068, 477.598625)">0.0</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use xlink:href="#m545fa0dad1" x="150.1858" y="462.612" style="fill: #262626; stroke: #262626"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="fill: #262626; font: 8.8px 'sans-serif'; text-anchor: middle" x="150.1858" y="477.598625" transform="rotate(-0, 150.1858, 477.598625)">0.2</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3">
+      <g>
+       <use xlink:href="#m545fa0dad1" x="234.3036" y="462.612" style="fill: #262626; stroke: #262626"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="fill: #262626; font: 8.8px 'sans-serif'; text-anchor: middle" x="234.3036" y="477.598625" transform="rotate(-0, 234.3036, 477.598625)">0.4</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#m545fa0dad1" x="318.4214" y="462.612" style="fill: #262626; stroke: #262626"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="fill: #262626; font: 8.8px 'sans-serif'; text-anchor: middle" x="318.4214" y="477.598625" transform="rotate(-0, 318.4214, 477.598625)">0.6</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_5">
+      <g>
+       <use xlink:href="#m545fa0dad1" x="402.5392" y="462.612" style="fill: #262626; stroke: #262626"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="fill: #262626; font: 8.8px 'sans-serif'; text-anchor: middle" x="402.5392" y="477.598625" transform="rotate(-0, 402.5392, 477.598625)">0.8</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_6">
+      <g>
+       <use xlink:href="#m545fa0dad1" x="486.657" y="462.612" style="fill: #262626; stroke: #262626"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="fill: #262626; font: 8.8px 'sans-serif'; text-anchor: middle" x="486.657" y="477.598625" transform="rotate(-0, 486.657, 477.598625)">1.0</text>
+     </g>
+    </g>
+    <g id="text_7">
+     <text style="fill: #262626; font: 9.6px 'sans-serif'; text-anchor: middle" x="276.3625" y="490.72325" transform="rotate(-0, 276.3625, 490.72325)">Gradient Steps</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_7">
+      <defs>
+       <path id="m9a93c42610" d="M 0 0 
+L -4.8 0 
+" style="stroke: #262626"/>
+      </defs>
+      <g>
+       <use xlink:href="#m9a93c42610" x="46.068" y="442.612" style="fill: #262626; stroke: #262626"/>
+      </g>
+     </g>
+     <g id="text_8">
+      <text style="fill: #262626; font: 8.8px 'sans-serif'; text-anchor: end" x="37.768" y="445.955312" transform="rotate(-0, 37.768, 445.955312)">0.0</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_8">
+      <g>
+       <use xlink:href="#m9a93c42610" x="46.068" y="360.9632" style="fill: #262626; stroke: #262626"/>
+      </g>
+     </g>
+     <g id="text_9">
+      <text style="fill: #262626; font: 8.8px 'sans-serif'; text-anchor: end" x="37.768" y="364.306512" transform="rotate(-0, 37.768, 364.306512)">0.2</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_9">
+      <g>
+       <use xlink:href="#m9a93c42610" x="46.068" y="279.3144" style="fill: #262626; stroke: #262626"/>
+      </g>
+     </g>
+     <g id="text_10">
+      <text style="fill: #262626; font: 8.8px 'sans-serif'; text-anchor: end" x="37.768" y="282.657713" transform="rotate(-0, 37.768, 282.657713)">0.4</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_10">
+      <g>
+       <use xlink:href="#m9a93c42610" x="46.068" y="197.6656" style="fill: #262626; stroke: #262626"/>
+      </g>
+     </g>
+     <g id="text_11">
+      <text style="fill: #262626; font: 8.8px 'sans-serif'; text-anchor: end" x="37.768" y="201.008913" transform="rotate(-0, 37.768, 201.008913)">0.6</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_11">
+      <g>
+       <use xlink:href="#m9a93c42610" x="46.068" y="116.0168" style="fill: #262626; stroke: #262626"/>
+      </g>
+     </g>
+     <g id="text_12">
+      <text style="fill: #262626; font: 8.8px 'sans-serif'; text-anchor: end" x="37.768" y="119.360113" transform="rotate(-0, 37.768, 119.360113)">0.8</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_12">
+      <g>
+       <use xlink:href="#m9a93c42610" x="46.068" y="34.368" style="fill: #262626; stroke: #262626"/>
+      </g>
+     </g>
+     <g id="text_13">
+      <text style="fill: #262626; font: 8.8px 'sans-serif'; text-anchor: end" x="37.768" y="37.711313" transform="rotate(-0, 37.768, 37.711313)">1.0</text>
+     </g>
+    </g>
+    <g id="text_14">
+     <text style="fill: #262626; font: 9.6px 'sans-serif'; text-anchor: middle" x="17.77675" y="238.49" transform="rotate(-90, 17.77675, 238.49)">IT Neural Similarity</text>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 46.068 442.612 
+L 46.068 34.368 
+" style="fill: none; stroke: #262626; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 66.068 462.612 
+L 486.657 462.612 
+" style="fill: none; stroke: #262626; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_15">
+    <text style="fill: #262626; font: 9.6px 'sans-serif'" transform="translate(230.43475 17.6181)">IT Neural Similarity</text>
+    <text style="fill: #262626; font: 9.6px 'sans-serif'" transform="translate(235.43125 28.368)">(HVM, Monkey 2)</text>
+   </g>
+  </g>
+ </g>
+</svg>

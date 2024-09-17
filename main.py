@@ -48,6 +48,7 @@ def main(hparams):
         profiler="simple",
         log_gpu_memory=True,
         precision=16
+        #resume_from_checkpoint='/work/upschrimpf1/bocini/domain-transfer/IT-fitting/logs/240201-final-labels_0-mix_1/model_cornet_s-loss_logCKA-ds_sachimajajhongpublic-fanimals_All-neurons_All-stimuli_All-seed_5/version_0/checkpoints/epoch=539-step=11879.ckpt'
     ) 
     
     if hparams.evaluate:

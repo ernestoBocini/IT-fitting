@@ -250,6 +250,9 @@ class Model_Lightning(LightningModule):
 
                 if 'Rajalingham' in benchmark_identifier:
                     self.set_bn(mode='Stimuli')
+                elif 'Igustibagus' in benchmark_identifier:
+                    layers = ['1.module.'+layer for layer in ['V1', 'V2', 'V4', 'IT', 'decoder.avgpool']]
+                    self.set_bn(mode='Stimuli')
                 else:
                     self.set_bn(mode='ImageNet')
 
@@ -263,7 +266,7 @@ class Model_Lightning(LightningModule):
                 benchmark_log[benchmark_identifier] = score.values[0]
                 # also collect raw accuracy from i2n benchmarks. this requires modified brainscore which reports P.
                 if 'i2n' in benchmark_identifier:
-                    benchmark_log[benchmark_identifier+'_acc'] = score.acc
+                    benchmark_log[benchmark_identifier+'_acc'] = score.values[0].item()
                 if self.hparams.verbose: print(f'layers: {layers}, {benchmark_log}')
 
             self.log_dict(benchmark_log, on_step=False, on_epoch=True, prog_bar=True, logger=True)
@@ -485,7 +488,6 @@ class Model_Lightning(LightningModule):
         losses.append(self.loss_weights_map('StimClass')*stim_class_loss)
 
         return sum(losses)
-
     def _training_step_causal(self, batch, batch_idx):
         # stochastically zero grads for neural similarity. always zero before step 2500, so HVM accuracy is equilabrated
         if (ch.rand(1) > self.hparams.mix_rate) or (self.global_step < 2500):

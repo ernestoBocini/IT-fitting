@@ -1,0 +1,198 @@
+/var/spool/slurmd/job1561014/slurm_script: line 9: cd: it-fitting: No such file or directory
+Tue Jan 30 11:18:16 2024       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 525.105.17   Driver Version: 525.105.17   CUDA Version: 12.0     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  Tesla V100-PCIE...  On   | 00000000:86:00.0 Off |                  Off |
+| N/A   58C    P0   172W / 250W |  29570MiB / 32768MiB |    100%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   1  Tesla V100-PCIE...  On   | 00000000:D8:00.0 Off |                  Off |
+| N/A   32C    P0    26W / 250W |      0MiB / 32768MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|    0   N/A  N/A   1829512      C   ...vs/ColabDesign/bin/python    29566MiB |
++-----------------------------------------------------------------------------+
+/home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/brainscore/metrics/__init__.py:37: FutureWarning: xarray subclass Score should explicitly define __slots__
+  class Score(DataAssembly):
+Global seed set to 0
+[W Context.cpp:70] Warning: torch.use_deterministic_algorithms is in beta, and its design and functionality may change in the future. (function operator())
+/home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/pytorch_lightning/core/datamodule.py:175: LightningDeprecationWarning: DataModule property `dims` was deprecated in v1.5 and will be removed in v1.7.
+  rank_zero_deprecation("DataModule property `dims` was deprecated in v1.5 and will be removed in v1.7.")
+/home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/torchvision/transforms/transforms.py:1329: UserWarning: Argument fillcolor is deprecated and will be removed since v0.10.0. Please, use fill instead
+  "Argument fillcolor is deprecated and will be removed since v0.10.0. Please, use fill instead"
+/home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/torch/utils/data/dataloader.py:477: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+Using 16bit native Automatic Mixed Precision (AMP)
+/home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/pytorch_lightning/trainer/connectors/logger_connector/logger_connector.py:34: LightningDeprecationWarning: Setting `log_gpu_memory` with the trainer flag is deprecated in v1.5 and will be removed in v1.7. Please monitor GPU stats with the `DeviceStatsMonitor` callback directly instead.
+  "Setting `log_gpu_memory` with the trainer flag is deprecated in v1.5 and will be removed in v1.7. "
+/home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/pytorch_lightning/trainer/connectors/callback_connector.py:148: LightningDeprecationWarning: Setting `Trainer(checkpoint_callback=<pytorch_lightning.callbacks.model_checkpoint.ModelCheckpoint object at 0x7fe28c909e80>)` is deprecated in v1.5 and will be removed in v1.7. Please consider using `Trainer(enable_checkpointing=<pytorch_lightning.callbacks.model_checkpoint.ModelCheckpoint object at 0x7fe28c909e80>)`.
+  f"Setting `Trainer(checkpoint_callback={checkpoint_callback})` is deprecated in v1.5 and will "
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/torch/utils/data/dataloader.py:477: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+Namespace(BS_benchmarks=['dicarlo.Rajalingham2018public-i2n'], adapt_bn_to_stim=1, adv_eval_images=True, adv_eval_neural=False, adv_train_images=False, arch='cornet_s', batch_size=128, behavior_benchmarks=['None'], benchmarks=['fneurons.ustimuli', 'magneto.var6', 'nano.var6', 'nano.left.var6'], causal=1, controls=['None'], datamodule=['ImageNet', 'NeuralData'], distributed_backend='dp', epochs=2, eps=0.000980392156862745, evaluate=False, exponent=-1.0, file_name='model_cornet_s-loss_logCKA-ds_sachimajajhongpublic-fanimals_All-neurons_All-stimuli_All-seed_0', fit_animals=['All'], gpus=1, image_size=224, log_save_path='./logs/EB', loss_weights=[1.0, 1.0, 1.0], lr=0.001, mix_rate=1.0, momentum=0.9, multi_bn=0, neural_loss='logCKA', neural_train_transform=1, neural_val_loss='CKA', neuraldataset='sachimajajhongpublic', neurons='All', num_nodes=1, num_workers=4, optim='sgd', pretrained=1, rank=10, record_time=False, regions=['IT'], rotate='(-0.5, 0.5)', save_path='EB', save_top_k=1, scale='(0.9, 1.1)', scheduler='StepLR', seed=0, shear='(0.9375, 1.0625, 0.9375, 1.0625)', statedict_path='EB/trained_models/model_cornet_s-loss_logCKA-ds_sachimajajhongpublic-fanimals_All-neurons_All-stimuli_All-seed_0.pt', step_size=10000, stimuli='All', test=0, test_animals=['All'], train_eps=0.000980392156862745, translate='(0.0625, 0.0625)', trials='All', v_num=None, val_batches=0.1, val_every=30, verbose=True, weight_decay=0.0001, window='7t17')
+Using pretrained model: 1
+Hooking regions ['IT']
+
+validating on fitted neurons and unfitted stimuli
+constructing test data with
+animals:['All']
+neurons:All
+trials:All
+
+chabo left shape:
+(time_bins, stimuli, sites) : (36, 3200, 38)
+chabo left shape:
+(stimuli, sites) : (3200, 38)
+(stimuli, sites) : (3200, 38)
+tito left shape:
+(time_bins, stimuli, sites) : (36, 3200, 63)
+tito left shape:
+(stimuli, sites) : (3200, 63)
+(stimuli, sites) : (3200, 63)
+solo left shape:
+(time_bins, stimuli, sites) : (36, 3200, 88)
+solo left shape:
+(stimuli, sites) : (3200, 88)
+(stimuli, sites) : (3200, 88)
+Neural data shape:
+(stimuli, sites) : (3200, 189)
+Using transforms on neural training data
+neural validation set shape: (320, 3, 256, 256), [(320, 189), (320,)]
+constructing test data with
+animals:['magneto.left', 'magneto.right']
+neurons:All
+trials:All
+
+magneto left shape:
+(stimuli, sites, trials) : (320, 19, 51)
+(stimuli, sites, trials) : (320, 19, 51)
+(stimuli, sites) : (320, 19)
+magneto right shape:
+(stimuli, sites, trials) : (320, 125, 63)
+(stimuli, sites, trials) : (320, 125, 63)
+(stimuli, sites) : (320, 125)
+Neural data shape:
+(stimuli, sites) : (320, 144)
+Using transforms on neural training data
+neural validation set shape: (320, 3, 256, 256), [(320, 144), (320,)]
+constructing test data with
+animals:['magneto.left']
+neurons:All
+trials:All
+
+magneto left shape:
+(stimuli, sites, trials) : (320, 19, 51)
+(stimuli, sites, trials) : (320, 19, 51)
+(stimuli, sites) : (320, 19)
+Neural data shape:
+(stimuli, sites) : (320, 19)
+Using transforms on neural training data
+neural validation set shape: (320, 3, 256, 256), [(320, 19), (320,)]
+constructing test data with
+animals:['nano.left', 'nano.right']
+neurons:All
+trials:All
+
+nano left shape:
+(stimuli, sites, trials) : (320, 141, 58)
+(stimuli, sites, trials) : (320, 141, 58)
+(stimuli, sites) : (320, 141)
+nano right shape:
+(stimuli, sites, trials) : (320, 139, 47)
+(stimuli, sites, trials) : (320, 139, 47)
+(stimuli, sites) : (320, 139)
+Neural data shape:
+(stimuli, sites) : (320, 280)
+Using transforms on neural training data
+neural validation set shape: (320, 3, 256, 256), [(320, 280), (320,)]
+constructing test data with
+animals:['nano.left']
+neurons:All
+trials:All
+
+nano left shape:
+(stimuli, sites, trials) : (320, 141, 58)
+(stimuli, sites, trials) : (320, 141, 58)
+(stimuli, sites) : (320, 141)
+Neural data shape:
+(stimuli, sites) : (320, 141)
+Using transforms on neural training data
+neural validation set shape: (320, 3, 256, 256), [(320, 141), (320,)]
+record_time =  False
+Validating: 0it [00:00, ?it/s]Validating: 0it [00:00, ?it/s]Traceback (most recent call last):
+  File "main.py", line 199, in <module>
+    main(get_args())
+  File "main.py", line 56, in main
+    trainer.validate(model)
+  File "/home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/pytorch_lightning/trainer/trainer.py", line 814, in validate
+    return self._call_and_handle_interrupt(self._validate_impl, model, dataloaders, ckpt_path, verbose, datamodule)
+  File "/home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/pytorch_lightning/trainer/trainer.py", line 682, in _call_and_handle_interrupt
+    return trainer_fn(*args, **kwargs)
+  File "/home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/pytorch_lightning/trainer/trainer.py", line 857, in _validate_impl
+    results = self._run(model, ckpt_path=self.validated_ckpt_path)
+  File "/home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/pytorch_lightning/trainer/trainer.py", line 1193, in _run
+    self._dispatch()
+  File "/home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/pytorch_lightning/trainer/trainer.py", line 1268, in _dispatch
+    self.training_type_plugin.start_evaluating(self)
+  File "/home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/pytorch_lightning/plugins/training_type/training_type_plugin.py", line 206, in start_evaluating
+    self._results = trainer.run_stage()
+  File "/home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/pytorch_lightning/trainer/trainer.py", line 1279, in run_stage
+    return self._run_evaluate()
+  File "/home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/pytorch_lightning/trainer/trainer.py", line 1327, in _run_evaluate
+    eval_loop_results = self._evaluation_loop.run()
+  File "/home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/pytorch_lightning/loops/base.py", line 145, in run
+    self.advance(*args, **kwargs)
+  File "/home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/pytorch_lightning/loops/dataloader/evaluation_loop.py", line 109, in advance
+    dl_outputs = self.epoch_loop.run(dataloader, dataloader_idx, dl_max_batches, self.num_dataloaders)
+  File "/home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/pytorch_lightning/loops/base.py", line 145, in run
+    self.advance(*args, **kwargs)
+  File "/home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/pytorch_lightning/loops/epoch/evaluation_epoch_loop.py", line 123, in advance
+    output = self._evaluation_step(batch, batch_idx, dataloader_idx)
+  File "/home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/pytorch_lightning/loops/epoch/evaluation_epoch_loop.py", line 215, in _evaluation_step
+    output = self.trainer.accelerator.validation_step(step_kwargs)
+  File "/home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/pytorch_lightning/accelerators/accelerator.py", line 236, in validation_step
+    return self.training_type_plugin.validation_step(*step_kwargs.values())
+  File "/home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/pytorch_lightning/plugins/training_type/training_type_plugin.py", line 219, in validation_step
+    return self.model.validation_step(*args, **kwargs)
+  File "/work/upschrimpf1/bocini/domain-transfer/IT-fitting/model_lightning.py", line 178, in validation_step
+    self.classification(batch, mode)
+  File "/work/upschrimpf1/bocini/domain-transfer/IT-fitting/model_lightning.py", line 548, in classification
+    Y_hat = self.model(X)[:, output_inds[0]:output_inds[1]]
+  File "/home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/torch/nn/modules/module.py", line 889, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/torch/nn/modules/container.py", line 119, in forward
+    input = module(input)
+  File "/home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/torch/nn/modules/module.py", line 889, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/torch/nn/parallel/data_parallel.py", line 165, in forward
+    return self.module(*inputs[0], **kwargs[0])
+  File "/home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/torch/nn/modules/module.py", line 889, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/torch/nn/modules/container.py", line 119, in forward
+    input = module(input)
+  File "/home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/torch/nn/modules/module.py", line 889, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/cornet/cornet_s.py", line 74, in forward
+    x = self.conv1(x)
+  File "/home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/torch/nn/modules/module.py", line 889, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/torch/nn/modules/conv.py", line 399, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/home/bocini/miniconda3/envs/it-fitting-bs/lib/python3.6/site-packages/torch/nn/modules/conv.py", line 396, in _conv_forward
+    self.padding, self.dilation, self.groups)
+RuntimeError: Unable to find a valid cuDNN algorithm to run convolution
